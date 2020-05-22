@@ -1,4 +1,3 @@
-from pathlib import Path
 import sys
 
 from briefcase.config import AppConfig, parse_config
@@ -61,7 +60,7 @@ def pytest_cmdline_main(config):
     # Load the application config from the pyproject.toml
     # in the pytest rootdir
     _, app_configs = parse_config(
-        Path(config.rootdir) / 'pyproject.toml',
+        config.rootdir / 'pyproject.toml',
         platform=platform,
         output_format=output_format
     )
