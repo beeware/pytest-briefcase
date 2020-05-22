@@ -89,4 +89,4 @@ def pytest_cmdline_main(config):
     # Process the `sources` list for the app, adding to the pythonpath.
     # This matches the PYTHONPATH configuration done by `briefcase dev`
     for path in app.PYTHONPATH:
-        sys.path.insert(0, str(path))
+        sys.path.insert(0, str(config.rootdir / path))
