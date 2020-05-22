@@ -3,7 +3,6 @@ import sys
 
 from briefcase.config import AppConfig, parse_config
 from briefcase.platforms import get_platforms
-import pytest
 
 
 __version__ = '0.1.0'
