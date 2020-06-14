@@ -4,7 +4,7 @@ from briefcase.config import AppConfig, parse_config
 from briefcase.platforms import get_platforms
 
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 class BriefcasePytestConfigError(Exception):
