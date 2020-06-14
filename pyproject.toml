@@ -13,3 +13,15 @@ title_format = "{version} ({project_date})"
 issue_format = "`#{issue} <https://github.com/freakboy3742/pytest-tldr/issues/{issue}>`_"
 template = "changes/template.rst"
 underlines = ["-", "^", "\""]
+
+# pytest-briefcase isn't a Briefcase project, but it parses the Briefcase
+# configuration as part of the plugin startup, so we need a dummy app.
+# This config does nothing, but defines the existence of an app called `dummy`
+# with a dummy sources directory that doesn't exist.
+[tool.briefcase]
+version = "37.42"
+bundle = "org.beeware"
+description = "A placeholder app"
+
+[tool.briefcase.app.sample_app]
+sources = ['dummy/sample_app']

@@ -1,9 +1,7 @@
-from pathlib import Path
 import sys
 
 from briefcase.config import AppConfig, parse_config
 from briefcase.platforms import get_platforms
-import pytest
 
 
 __version__ = '0.1.0'
@@ -62,7 +60,7 @@ def pytest_cmdline_main(config):
     # Load the application config from the pyproject.toml
     # in the pytest rootdir
     _, app_configs = parse_config(
-        Path(config.rootdir) / 'pyproject.toml',
+        config.rootdir / 'pyproject.toml',
         platform=platform,
         output_format=output_format
     )
@@ -91,4 +89,4 @@ def pytest_cmdline_main(config):
     # Process the `sources` list for the app, adding to the pythonpath.
     # This matches the PYTHONPATH configuration done by `briefcase dev`
     for path in app.PYTHONPATH:
-        sys.path.insert(0, str(path))
+        sys.path.insert(0, str(config.rootdir / path))
