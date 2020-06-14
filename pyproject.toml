@@ -23,5 +23,5 @@ version = "37.42"
 bundle = "org.beeware"
 description = "A placeholder app"
 
-[tool.briefcase.app.dummy]
-sources = ['does_not_exist/dummy']
+[tool.briefcase.app.sample_app]
+sources = ['dummy/sample_app']
