@@ -1,3 +1,8 @@
+**NOTE** This project has been deprecated. It is no longer required, as
+Briefcase 0.3.12 includes an explicit test mode for both `dev` and `run`.
+This allows running a test suite in both the development environment and
+the packaged runtime environment.
+
 ================
 pytest-briefcase
 ================
@@ -11,10 +16,10 @@ pytest-briefcase
     :alt: Python versions
 
 .. image:: https://img.shields.io/pypi/l/pytest-briefcase.svg
-    :target: https://github.com/freakboy3742/pytest-briefcase/blob/master/LICENSE
+    :target: https://github.com/freakboy3742/pytest-briefcase/blob/main/LICENSE
     :alt: License
 
-.. image:: https://github.com/beeware/pytest-briefcase/workflows/CI/badge.svg?branch=master
+.. image:: https://github.com/beeware/pytest-briefcase/workflows/CI/badge.svg?branch=main
    :target: https://github.com/beeware/pytest-briefcase/actions
    :alt: Build Status
 
